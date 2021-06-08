@@ -10,7 +10,7 @@ const NavBar = () => {
                 Where
             </li>
             <li>
-                Updates
+                <a href="/Updates">Updates</a>
             </li>
             <li>
                 Notice Board

@@ -1,6 +1,6 @@
 import MainPage from './Containers/MainPage';
 import NavBar from './Containers/Navbar';
-import Updates from './Components/Updates';
+import Updates from './Containers/Updates';
 
 function App() {
   return (
