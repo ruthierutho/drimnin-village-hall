@@ -34,8 +34,11 @@ const UpdateForm = ({onUpdateSubmit}) => {
             <form className="update-form" onSubmit={handleSubmit}>
 
                 <input type="text" size="40" placeholder="Title" value={title} onChange={handleTitleChange} /> 
-                <input type="text" size="80" placeholder="Say something..." value={text} onChange={handleTextChange} />
+                <br></br>
+                <textarea placeholder="Say something..." value={text} onChange={handleTextChange} />
+                <br></br>
                 <input type="date" id="start" name="date-posted" value={date} onChange={handleDateChange}></input>
+                <br></br>
                 <input type="submit" value="save" />
 
             </form>
