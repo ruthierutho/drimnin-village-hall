@@ -23,6 +23,9 @@ const UpdateForm = ({onUpdateSubmit}) => {
             return
         }
         onUpdateSubmit({text, date, title})
+        setText("");
+        setDate("");
+        setTitle("");
     }
 
     return (

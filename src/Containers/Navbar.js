@@ -1,21 +1,47 @@
 import React from 'react';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
+  import Updates from './Updates';
+  import Where from './Where';
+  import MainPage from './MainPage';
 
 const NavBar = () => {
     return(
-        <ul>
+        <Router>
+      <div>
+        <nav>
+          <ul>
             <li>
-                Home
+              <Link to="/">Home</Link>
             </li>
             <li>
-                Where
+              <Link to="/where">Where</Link>
             </li>
             <li>
-                <a href="/Updates">Updates</a>
+              <Link to="/updates">Updates</Link>
             </li>
-            <li>
-                Notice Board
-            </li>
-        </ul>
+          </ul>
+        </nav>
+
+        {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+        <Switch>
+          <Route path="/where">
+            <Where />
+          </Route>
+          <Route path="/updates">
+            <Updates />
+          </Route>
+          <Route path="/">
+            <MainPage />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
     )
 }
 
