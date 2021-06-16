@@ -3,7 +3,7 @@ import UpdatesList from '../Components/UpdatesList';
 import UpdateForm from '../Components/UpdateForm';
 
 
-const Updates = () => {
+const Events = () => {
 
     const [updates, setUpdates] = useState([])
 
@@ -23,4 +23,4 @@ const Updates = () => {
 
 }
 
-export default Updates;
+export default Events;

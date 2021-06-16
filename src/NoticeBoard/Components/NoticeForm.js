@@ -1,16 +1,11 @@
 import React, { useState } from 'react';
 
-const UpdateForm = ({onUpdateSubmit}) => {
+const NoticeForm = ({onNoticeSubmit}) => {
     const [text, setText] = useState("");
-    const [date, setDate] = useState();
     const [title, setTitle] = useState("");
 
     const handleTextChange = (evt) => {
         setText(evt.target.value);
-    }
-
-    const handleDateChange = (evt) => {
-        setDate(evt.target.value)
     }
 
     const handleTitleChange = (evt) => {
@@ -19,25 +14,22 @@ const UpdateForm = ({onUpdateSubmit}) => {
 
     const handleSubmit = (evt) => {
         evt.preventDefault();
-        if (!text && !date && !title){
+        if (!text && !title){
             return
         }
-        onUpdateSubmit({text, date, title})
+        onNoticeSubmit({text, title})
         setText("");
-        setDate("");
         setTitle("");
     }
 
     return (
         <>
-            <h3>Event form:</h3>
-            <form className="update-form" onSubmit={handleSubmit}>
+            <h3>Notice form:</h3>
+            <form className="notice-form" onSubmit={handleSubmit}>
 
                 <input type="text" size="40" placeholder="Title" value={title} onChange={handleTitleChange} /> 
                 <br></br>
                 <textarea placeholder="Say something..." value={text} onChange={handleTextChange} />
-                <br></br>
-                <input type="date" id="start" name="date-posted" value={date} onChange={handleDateChange}></input>
                 <br></br>
                 <input type="submit" value="save" />
 
@@ -47,4 +39,4 @@ const UpdateForm = ({onUpdateSubmit}) => {
     )
 }
 
-export default UpdateForm;
+export default NoticeForm;

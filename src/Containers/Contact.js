@@ -3,7 +3,7 @@ import arial from '../Static/ariel-view.jpg'
 
 
 
-const Where = () => {
+const Contact = () => {
     return (
         <>  
             <h2>Where to find us:</h2>
@@ -55,4 +55,4 @@ const Where = () => {
     )
 }
 
-export default Where;
+export default Contact;

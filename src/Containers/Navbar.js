@@ -5,10 +5,11 @@ import {
     Route,
     Link
 } from "react-router-dom";
-import Updates from './Updates';
-import Where from './Where';
+import Events from './Events';
+import Contact from './Contact';
 import MainPage from './MainPage';
-import NoticeBoard from './NoticeBoard';
+import NoticeBoard from '../NoticeBoard/Containers/NoticeBoard';
+import Blog from './Blog';
 
 const NavBar = () => {
     return (
@@ -20,13 +21,16 @@ const NavBar = () => {
                             <Link to="/">Home</Link>
                         </li>
                         <li>
-                            <Link to="/where">Where</Link>
+                            <Link to="/contact">Contact</Link>
                         </li>
                         <li>
-                            <Link to="/updates">Updates</Link>
+                            <Link to="/events">Events</Link>
                         </li>
                         <li>
                             <Link to="/noticeboard">Notice Board</Link>
+                        </li>
+                        <li>
+                            <Link to="/blog">Blog</Link>
                         </li>
                     </ul>
                 </nav>
@@ -37,11 +41,14 @@ const NavBar = () => {
                     <Route path="/noticeboard">
                         <NoticeBoard />
                     </Route>
-                    <Route path="/where">
-                        <Where />
+                    <Route path="/contact">
+                        <Contact />
                     </Route>
-                    <Route path="/updates">
-                        <Updates />
+                    <Route path="/events">
+                        <Events />
+                    </Route>
+                    <Route path="/blog">
+                        <Blog />
                     </Route>
                     <Route path="/">
                         <MainPage />

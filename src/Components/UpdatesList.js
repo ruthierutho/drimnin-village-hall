@@ -10,7 +10,7 @@ const UpdateList = ({updates}) => {
 
     return (
         <>
-            <h1>Updates List:</h1>
+            <h1>Events List:</h1>
             {updatesArray}
         </>
     )

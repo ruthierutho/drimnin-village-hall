@@ -1,6 +1,5 @@
 import MainPage from './Containers/MainPage';
 import NavBar from './Containers/Navbar';
-import Updates from './Containers/Updates';
 import dvh from './Static/dvh.jpg'
 
 function App() {
